@@ -1,0 +1,473 @@
+*{
+    padding: 0px; 
+    margin: 0px; 
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    
+}
+:root{
+    --primary:indianred;
+    --secondary:rgba(15,10,29,0.849);
+    --light:#2f3640;
+}
+header{
+    width: 100%; height: 100vh;
+}
+.nav1{
+    background-color: black;
+    width: 100%;height: 80px; display: flex;
+    justify-content: space-around; 
+    align-items: center; position: relative;
+    flex-wrap: wrap; text-align: center;
+    box-shadow: 2px 0px 3px grey;
+}
+.nav1 span{
+    color: wheat;
+}
+.nav1 p{
+    color: var(--primary);
+}
+.nav1 .left{
+    flex-basis: 50%;
+    letter-spacing: 2px;
+}
+.nav1 .left a{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    margin: 0px 5px;
+}
+.right{
+    flex-shrink: 50%;
+}
+.right i{
+    font-size: 20px; margin: 0px 15px;
+    background-color: var(--primary);
+    color: white; padding: 8px; cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.nav1 .right i:hover{
+transform: rotate(360deg);
+}
+.nav2{
+  width: 100%;height: 120px;display: flex;
+    justify-content: space-between;align-items: center;
+    flex-wrap: wrap; text-align: center;
+}
+.nav2 .nav2-left, .nav2 .nav2-center, .nav2 .nav2-right{
+    flex-basis: 30%; margin: auto;cursor: pointer;
+}
+.nav2 .nav2-left i{
+    margin-left: 15px;
+}
+.nav2 .nav2-center h1{
+    color: var(--primary);
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+.nav2 .nav2-center h1 span{
+    color: var(--secondary);
+}
+.nav2 .nav2-center p{
+    color: grey; font-size: 15px;
+    margin-top: 5px;
+}
+.nav2 .nav2-right i{
+    margin: 0px 5px;
+}
+
+.nav3{
+    width: 100%; height: 70px; line-height: 70px;
+}
+.nav3 ul{
+    list-style: none; text-align: center;
+}
+.nav3 ul li{
+    display: inline-block ;width: 150px;
+    position: relative; z-index: 99;
+}
+.nav3 ul li a{
+text-decoration: none; color: black; 
+display: block; font-weight: 500;
+}
+.nav3 ul li a:hover{
+    color: var(--primary);
+}
+.nav3 ul li i{
+    color: var(--primary);
+    margin: 0px 5px;
+}
+.nav3 ul ul{
+    display: none;
+    position: absolute; top: 70px; left: 0;
+}
+.nav3 ul ul li{
+    background-color: white;
+    border-bottom: 1px solid var(--primary);
+}
+.nav3 ul li:hover>ul{
+    display: block;
+}
+.featured{
+    width: 100%; height: 70vh;
+    background: url(1.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+.featured-text{
+    max-width: 500px; padding: 10px;
+    position: absolute; font-size: 2rem;
+    top: 50%; left: 400px; letter-spacing: 5px;
+    color: #111; text-align: center;
+    font-family: 'Akaya Kanadaka', cursive;
+}
+.featured-text button{
+    padding: 10px 20px; border: none;
+    outline: none; color: white;
+    margin: 20px 0px; background-color: var(--secondary);
+}
+.latest{
+    padding: 50px 100px;
+}
+.product-intro{
+    text-align: center;
+}
+.product-intro h1{
+    color: var(--primary); letter-spacing: 0.2rem;
+    font-size: 2rem; font-weight: bolder;
+}
+.product-intro h1 span{
+    color: var(--secondary);
+}
+.product-intro p{
+    color: grey; margin: 15px 0px;
+}
+.card-container{
+    width: 100%; display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 4rem 0;
+    flex-wrap: wrap;
+}
+.card-container .card{
+    flex-basis: 20%;
+    padding: 0.8rem;
+    position: relative;
+}
+.card-container progress{
+    flex-basis: 20%;
+    padding: 0.8rem;
+    position: relative;
+}
+.card img{
+    width: 100%; transition: 0.5s ease-in-out;
+}
+.card i{
+    color: goldenrod;margin: 10px 0;
+}
+.card button{
+    color: white; border:1px solid black;
+    outline: none; margin-top: 15px;
+    padding: 5px 20px; background: rgb(8, 5, 5);
+}
+.card:hover img, .card:hover h1{
+    width: 80%;
+    color: var(--primary);
+}
+ .card::before{
+    content: '20% OFF'; width: 25%;
+    height: 25px; line-height:25px ;
+    color: white;top: 0;left: 0;
+    position: absolute; padding: 0px 4px;
+    background-color: var(--primary);
+    transform: rotate(-20deg); 
+ }
+.trends{
+    padding: 50px 100px;
+    background-color: rgba(0,0,0,0.01);
+}
+
+.trends .swiper-container {
+    width: 100%;
+    padding: 50px;
+  }
+
+  .trends .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .trends .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+footer{
+    background-color: var(--secondary);
+    color: white; display: flex;
+    justify-content: space-around;
+    align-items: center; flex-wrap: wrap;
+    text-align: center; padding: 2rem;
+}
+footer div{
+    flex-basis: 30%;
+}
+footer h1{
+letter-spacing: 0.5rem;
+}
+footer h1 span{
+    color: var(--primary);
+} 
+footer i{
+    margin: 0px 5px;
+}
+footer p{
+    font-size: 1rem;
+}
+#sidenav{
+    display: none;
+}
+#menubar{
+    display: none;
+}
+ 
+@media only screen and (max-width:769px){
+    #sidenav{
+        display: block;
+    }
+    #menubar{
+        display: block;
+        position: absolute;
+        top: 50%; right: 0;
+        transform: translate(0%,-50%);
+        z-index: 99; color: white;
+        font-size: 2rem; padding: 20px 10px;
+        background-color: var(--primary);
+        animation: animate 5s ease infinite;
+    }
+    @keyframes animate{
+        0%{
+            background-color: var(--secondary);
+        }
+        100%{
+            background-color: var(--primary);
+        }
+    }
+
+    #sidenav{
+       position: absolute;
+       top: 0; 
+       left: 0;
+       z-index: 3;
+       background-color: var(--light);
+       padding-top: 70px; 
+       display: block;
+       overflow: hidden; 
+       transition: 0.5s ease-in-out;
+       width: 0px; 
+       height: 70px; 
+       
+    }
+    #sidenav ul{
+        list-style: none; 
+    }
+    #sidenavul li{
+        display:block ;width: 200px;
+        position: relative; z-index: 99;
+        margin: 10px 20px;
+    }
+    #sidenav ul li a{
+    text-decoration: none; color: white; 
+    display: block; font-weight: 200px;
+    padding: 10px 20px;
+    }
+    #sidenav ul li a:hover{
+        color: var(--primary);
+    }
+    #sidenav  ul li i{
+        color: white;
+        margin: 0px 5px;
+    }
+    #sidenav ul ul{
+        display: none;
+        position: absolute;
+         top: 70px;
+          left: 0;
+    }
+    #sidenav ul ul li{
+       
+        border-bottom: 1px solid white;
+    }
+    #sidenav  ul li:hover>ul{
+        display: block;
+    }
+
+    #sidenav {
+        position: relative; z-index: 2;
+        background-color: white;
+
+    }  
+    .right i{
+        font-size: 15px;margin: 0px 5px;
+    }
+    .nav2{
+        width: 100%;
+       height: 80px;   
+ }
+ .nav2 .nav2-lefti{
+     margin-left: 0px;
+ }
+ .nav2 .nav2-center h1{
+   
+     font-size: 1.5rem;
+     letter-spacing: 2px;
+     
+ }
+ .nav2 .nav2-center h1 span{
+     color: var(--secondary);
+ }
+ .nav2 .nav2-center p{
+     color: grey;
+     font-size: 10px;
+     margin-top: 5px;
+ }
+ .nav2 .nav2-right i{
+     margin: 0px 5px;
+ }
+.nav3{
+    display: none;
+}
+.featured{background-attachment: fixed;}
+.latest{padding: 0px 50px;}
+.product-intro{
+    text-align: center;
+}
+.product-intro h1{
+    color: var(--primary); letter-spacing: 0.2rem;
+    font-size: 2rem; font-weight: bolder;
+}
+.product-intro h1 span{
+    color: var(--secondary);
+}
+.product-intro p{
+    color: grey; margin: 15px 0px;
+}
+.card-container{
+    margin: 2rem 0;
+}
+.card-container .card{
+    flex-basis: 100%;
+    padding: 0.8rem;
+    position: relative;
+    text-align: center;
+}
+.card img{
+    width: 100%;
+     transition: 0.5s ease-in-out;
+}
+
+.card button{
+    color: white; 
+    border:1px solid black;
+    outline: none;
+     margin-top: 15px;
+    padding: 5px 20px;
+     background: rgb(8, 5, 5);
+}
+.trends{
+    padding: 20px 50px;
+    background-color: rgba(0,0,0,0.01);
+}
+
+.trends .swiper-container {
+    width: 100%;
+    padding: 50px;
+  }
+
+  .trends .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 360px;
+    height: 360px;
+  }
+
+  .trends .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  footer div{
+      flex-basis: 50%;
+      margin: 10px 0px;
+  }
+}
+
+
+
+
+
+
+/*contact*/
+
+.contact{
+    background: url(contact-bg.jpg);
+    background-size: cover;
+}
+
+.contactForm{
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin-top: 50px;
+    margin-left: 28%;
+}
+
+.contactForm h3{
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+
+.contactForm .inputBox input[type = "submit"]{
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
